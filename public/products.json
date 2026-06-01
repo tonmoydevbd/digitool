@@ -1,0 +1,96 @@
+[
+  {
+    "id": "prod_01",
+    "name": "Starter Plan",
+    "description": "Perfect for individuals starting out with basic project tracking needs.",
+    "price": 0.00,
+    "period": "one-time",
+    "tag": "Free",
+    "tagType": "new",
+    "features": [
+      "3 active projects",
+      "Basic task boards",
+      "Export to CSV"
+    ],
+    "icon": "https://i.postimg.cc/9MCxyN8g/writing-2327400-1.png"
+  },
+  {
+    "name": "Professional Tier",
+    "id": "prod_02",
+    "description": "Advanced tools built specifically for growing freelance businesses and consultants.",
+    "price": 19.99,
+    "period": "monthly",
+    "tag": "Popular",
+    "tagType": "popular",
+    "features": [
+      "100+ templates",
+      "ATS optimization",
+      "Export to PDF",
+      "Priority email support"
+    ],
+    "icon": "https://i.postimg.cc/cH0Df59T/design-tool.png"
+  },
+  {
+    "id": "prod_03",
+    "name": "Growth Bundle",
+    "description": "Complete access to marketing automation tools for small agencies.",
+    "price": 189.00,
+    "period": "yearly",
+    "tag": "Best Seller",
+    "tagType": "best seller",
+    "features": [
+      "Unlimited active funnels",
+      "Custom domain hosting",
+      "Advanced analytics dashboard",
+      "Weekly team training"
+    ],
+    "icon": "https://i.postimg.cc/50bP8k7P/operation.png"
+  },
+  {
+    "id": "prod_04",
+    "name": "Enterprise Suite",
+    "description": "Full-scale operations management with dedicated security for large corporations.",
+    "price": 999.00,
+    "period": "monthly",
+    "tag": "Top Rated",
+    "tagType": "popular",
+    "features": [
+      "Dedicated account manager",
+      "SAML SSO integration",
+      "99.9% uptime SLA",
+      "Custom API access"
+    ],
+    "icon": "https://i.postimg.cc/cH0Df59F/portfolio.png"
+  },
+  {
+    "id": "prod_05",
+    "name": "Creator Toolkit",
+    "description": "A standalone pack of premium assets for video editors and digital designers.",
+    "price": 49.00,
+    "period": "one-time",
+    "tag": "New Release",
+    "tagType": "new",
+    "features": [
+      "500+ vector elements",
+      "Commercial use license",
+      "Lifetime free updates"
+    ],
+    "icon": "https://i.postimg.cc/1tsWDYCY/social-media.png"
+  },
+  {
+    "id": "prod_06",
+    "name": "Analytics Pro",
+    "description": "Deep-dive data tracking to optimize e-commerce conversion rates.",
+    "price": 450.00,
+    "period": "yearly",
+    "tag": "Value Pick",
+    "tagType": "best seller",
+    "features": [
+      "Real-time user heatmaps",
+      "A/B testing engine",
+      "Multi-channel attribution",
+      "Slack alert integration"
+    ],
+    "icon": "https://i.postimg.cc/W3T90fWX/shopping-cart.png"
+  }
+]
