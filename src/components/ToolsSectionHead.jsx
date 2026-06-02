@@ -1,8 +1,7 @@
 import { useState } from "react";
 
-export const ToolsSectionHead = () => {
-  const [isActiveProducts, setIsActiveProducts] = useState(true);
-  const [isActiveCart, setIsActiveCart] = useState(false);
+export const ToolsSectionHead = (props) => {
+  const { isActiveCart, setIsActiveCart, isActiveProducts, setIsActiveProducts } = props
 
   const handleProductsClick = () => {
     setIsActiveProducts(true);
