@@ -2,22 +2,8 @@
 import { FaPencilRuler } from "react-icons/fa";
 import { TiTick } from "react-icons/ti";
 
-// "id": "prod_01",
-//     "name": "Starter Plan",
-//     "description": "Perfect for individuals starting out with basic project tracking needs.",
-//     "price": 0.00,
-//     "period": "one-time",
-//     "tag": "Free",
-//     "tagType": "new",
-//     "features": [
-//       "3 active projects",
-//       "Basic task boards",
-//       "Export to CSV"
-//     ],
-//     "icon": "https://i.postimg.cc/9MCxyN8g/writing-2327400-1.png"
-
-export const ProductCart = ({ product }) => {
-  const { name, description, price, period, tag, tagType, features, icon } = product
+export const ProductCard = ({ product, productClick }) => {
+  const { id, name, description, price, period, tag, tagType, features, icon } = product
 
   return (
     <div className="flex flex-col gap-4 text-start p-6 border border-gray-200 rounded-xl ">
@@ -31,7 +17,7 @@ export const ProductCart = ({ product }) => {
       <ul>
         {features.map((item, index) => <li key={index} className="flex items-center gap-1"><TiTick className="text-green-600" />{item}</li>)}
       </ul>
-      <a className="mt-auto btn bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300  hover:scale-105 shadow-md ">Get Started</a>
+      <a onClick={() => productClick(id)} className="mt-auto btn bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300  hover:scale-105 shadow-md ">Get Started</a>
     </div>
   )
 }

@@ -1,17 +1,22 @@
-import { use, useState } from "react"
-import { ProductCart } from "./ProductCart"
+import { useState } from "react"
 import { ToolsSectionHead } from "./ToolsSectionHead"
+import { ProductCard } from "./ProductCard"
 import { CartSection } from "./CartSection"
 
-const productsPromise = fetch('./products.json').then(res => res.json())
 
-export const ToolsSection = () => {
+
+export const ToolsSection = (props) => {
+  const { productsData, clickedProduct, setClickedProduct, cartProduct, handleRemoveProduct } = props
+
   const [isActiveProducts, setIsActiveProducts] = useState(true);
   const [isActiveCart, setIsActiveCart] = useState(false);
-  const productsData = use(productsPromise)
-  console.log(productsData)
+
+  const productClick = (id) => {
+    setClickedProduct(prev => [...prev, id])
+  }
+
   const productsEl = productsData?.map(product => {
-    return <ProductCart key={product.id} product={product} />
+    return <ProductCard key={product.id} product={product} productClick={productClick} />
   })
 
 
@@ -22,11 +27,12 @@ export const ToolsSection = () => {
         setIsActiveProducts={setIsActiveProducts}
         isActiveCart={isActiveCart}
         setIsActiveCart={setIsActiveCart}
+        cartProduct={cartProduct}
       />
 
       {isActiveProducts && <div className="max-w-300 mx-auto grid grid-cols-3 gap-8 pt-10">{productsEl}</div>}
 
-      {isActiveCart && <CartSection />}
+      {isActiveCart && <CartSection productsData={productsData} clickedProduct={clickedProduct} cartProduct={cartProduct} handleRemoveProduct={handleRemoveProduct} />}
 
     </div>
   )

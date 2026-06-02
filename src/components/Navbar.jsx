@@ -1,6 +1,6 @@
 import { FiShoppingCart } from "react-icons/fi";
 
-export const Navbar = () => {
+export const Navbar = ({ cartProduct }) => {
   const navLink = ['products', 'features', 'pricing', 'testimonials', 'faq'];
   const navLinkElements = navLink.map(item => <li key={item}><a href="/">{item.trim().toUpperCase()}</a></li>)
 
@@ -28,8 +28,11 @@ export const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end flex gap-4">
-          <FiShoppingCart className="font-bold text-xl" />
-          <a>Login</a>
+          <div className="inline-flex justify-center items-center relative ">
+            <FiShoppingCart className="font-bold text-xl " />
+            {cartProduct.length > 0 && <span className="absolute bottom-3 left-3 bg-red-800 py-0 px-1 text-xs text-white rounded-full">{cartProduct.length}</span>}
+          </div>
+          <a className="btn btn-ghost">Login</a>
           <a className="btn bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300  hover:scale-105 shadow-md">Get Started</a>
         </div>
       </div>

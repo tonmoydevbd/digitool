@@ -19,8 +19,8 @@ export const Hero = () => {
             software—all in one place. Start creating faster today. Explore Products
           </p>
           <div className="inline-flex gap-2">
-            <button className="btn bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-md">Explore Products</button>
-            <button className="inline-flex items-center bg-transparent hover:bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-purple-500 hover:text-white font-semibold py-2 px-4 border border-purple-500 hover:border-transparent rounded-full transition-all transform duration-300 hover:scale-105">
+            <button className="btn bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-100 shadow-md">Explore Products</button>
+            <button className="inline-flex items-center bg-transparent hover:bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-purple-500 hover:text-white font-semibold py-2 px-4 border border-purple-500 hover:border-transparent rounded-full transition-all transform duration-300 hover:scale-105 active:scale-100">
               <CiPlay1 className="text-xl" />Watch Demo
             </button>
           </div>

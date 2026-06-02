@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export const ToolsSectionHead = (props) => {
-  const { isActiveCart, setIsActiveCart, isActiveProducts, setIsActiveProducts } = props
+  const { isActiveCart, setIsActiveCart, isActiveProducts, setIsActiveProducts, cartProduct } = props
 
   const handleProductsClick = () => {
     setIsActiveProducts(true);
@@ -19,8 +19,8 @@ export const ToolsSectionHead = (props) => {
       <h2 className="text-5xl font-extrabold">Premium Digital Tools</h2>
       <p>Choose from our curated collection of premium digital products designedto boost your productivity and creativity.</p>
       <div className="flex justify-center gap-2">
-        <button onClick={handleProductsClick} className={`btn ${isActiveProducts ? 'bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white' : 'text-purple-500'} font-semibold py-2.5 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-md`}>Products</button>
-        <button onClick={handleCartClick} className={`btn ${isActiveCart ? 'bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white' : 'text-purple-500'} font-semibold py-2.5 px-6 rounded-full transition-all duration-300 transform hover:scale-105 shadow-md`}>Cart</button>
+        <button onClick={handleProductsClick} className={`btn ${isActiveProducts ? 'bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white' : 'text-purple-500'} font-semibold py-2.5 px-6 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-100 shadow-md`}>Products</button>
+        <button onClick={handleCartClick} className={`btn ${isActiveCart ? 'bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white' : 'text-purple-500'} font-semibold py-2.5 px-6 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-100 shadow-md`}>Cart{cartProduct.length > 0 && <span>({cartProduct.length})</span>}</button>
 
       </div>
     </div>
