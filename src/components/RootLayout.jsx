@@ -6,6 +6,7 @@ import { StatsSection } from "./StatsSection"
 import { ToolsSection } from "./ToolsSection"
 import { GetStarted } from "./GetStarted"
 import { Pricing } from "./Pricing"
+import { CallToAction } from "./CallToAction"
 
 const productsPromise = fetch('./products.json').then(res => res.json())
 
@@ -34,6 +35,7 @@ export const RootLayout = () => {
       />
       <GetStarted />
       <Pricing />
+      <CallToAction />
     </>
   )
 }
