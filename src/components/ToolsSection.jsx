@@ -21,7 +21,7 @@ export const ToolsSection = (props) => {
 
 
   return (
-    <div className="py-30 text-center bg-base-200">
+    <div className="py-30 text-center bg-white">
       <ToolsSectionHead
         isActiveProducts={isActiveProducts}
         setIsActiveProducts={setIsActiveProducts}
