@@ -16,7 +16,7 @@ export const ToolsSectionHead = (props) => {
 
   return (
     <div className="max-w-137.5 mx-auto flex flex-col gap-4">
-      <h2 className="text-5xl font-extrabold">Premium Digital Tools</h2>
+      <h2 className="text-3xl lg:text-5xl font-extrabold">Premium Digital Tools</h2>
       <p>Choose from our curated collection of premium digital products designedto boost your productivity and creativity.</p>
       <div className="flex justify-center gap-2">
         <button onClick={handleProductsClick} className={`btn ${isActiveProducts ? 'bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white' : 'text-purple-500'} font-semibold py-2.5 px-6 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-100 shadow-md`}>Products</button>

@@ -21,7 +21,7 @@ export const ToolsSection = (props) => {
 
 
   return (
-    <div className="py-30 text-center bg-white">
+    <div className="px-4 xl:px-0 py-10 lg:py-30 text-center bg-white">
       <ToolsSectionHead
         isActiveProducts={isActiveProducts}
         setIsActiveProducts={setIsActiveProducts}
@@ -30,7 +30,7 @@ export const ToolsSection = (props) => {
         cartProduct={cartProduct}
       />
 
-      {isActiveProducts && <div className="max-w-300 mx-auto grid grid-cols-3 gap-8 pt-10">{productsEl}</div>}
+      {isActiveProducts && <div className="max-w-300 mx-auto grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8 pt-10">{productsEl}</div>}
 
       {isActiveCart && <CartSection productsData={productsData} clickedProduct={clickedProduct} cartProduct={cartProduct} handleRemoveProduct={handleRemoveProduct} />}
 

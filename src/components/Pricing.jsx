@@ -19,11 +19,11 @@ export const Pricing = () => {
   </div>)
 
   return (
-    <div className="bg-white text-center py-30">
+    <div className="px-4 xl:px-0 bg-white text-center py-10 lg:py-30">
       <div className="max-w-300 mx-auto">
-        <h2 className="text-5xl font-extrabold mb-4">Simple, Transparent Pricing</h2>
+        <h2 className="text-3xl lg:text-5xl font-extrabold mb-4">Simple, Transparent Pricing</h2>
         <p>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
-        <div className="my-10 grid grid-cols-3 gap-4">
+        <div className="my-10 grid grid-cols-1 md:grid-cols-3 gap-4">
           {pricingDataEl}
         </div>
       </div>
