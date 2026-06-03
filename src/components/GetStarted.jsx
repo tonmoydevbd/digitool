@@ -1,12 +1,11 @@
 import { use } from "react"
 
-const stepsDataPromise = fetch('./startedStepsData.json').then(res => res.json())
+const stepsDataPromise = fetch('./started-steps-data.json').then(res => res.json())
 
 export const GetStarted = () => {
 
   const stepsData = use(stepsDataPromise)
-  console.log(stepsData)
-  const stepsDataEl = stepsData.map(item => <div key={item.id} className="p-5 border border-gray-300 rounded-xl">
+  const stepsDataEl = stepsData.map(item => <div key={item.id} className="bg-white p-5 border border-gray-300 rounded-xl">
     <div className="text-end"><span className="bg-purple-600 px-2 py-1.5 text-white rounded-full">0{item.id}</span></div>
 
     <div className="flex flex-col gap-4 items-center">

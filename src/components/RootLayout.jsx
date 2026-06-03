@@ -5,6 +5,7 @@ import { Navbar } from "./Navbar"
 import { StatsSection } from "./StatsSection"
 import { ToolsSection } from "./ToolsSection"
 import { GetStarted } from "./GetStarted"
+import { Pricing } from "./Pricing"
 
 const productsPromise = fetch('./products.json').then(res => res.json())
 
@@ -14,7 +15,6 @@ export const RootLayout = () => {
   const [clickedProduct, setClickedProduct] = useState([])
 
   const cartProduct = productsData.filter(product => clickedProduct.includes(product.id))
-  console.log(cartProduct)
   const handleRemoveProduct = (id) => {
     setClickedProduct(prevIds => prevIds.filter(itemId => itemId !== id))
   }
@@ -33,6 +33,7 @@ export const RootLayout = () => {
         handleRemoveProduct={handleRemoveProduct}
       />
       <GetStarted />
+      <Pricing />
     </>
   )
 }

@@ -6,7 +6,7 @@ export const ProductCard = ({ product, productClick }) => {
   const { id, name, description, price, period, tag, tagType, features, icon } = product
 
   return (
-    <div className="flex flex-col gap-4 text-start p-6 border border-gray-200 rounded-xl ">
+    <div className="flex flex-col gap-4 text-start p-6 border border-gray-200 bg-gray-100 rounded-xl ">
       <div className="flex justify-between items-start">
         <img src={icon} alt=" " className="border border-gray-200 rounded-full p-4 text-3xl" />
         <small className={`px-2 py-1  rounded-full ${tagType === 'best seller' ? 'bg-amber-200 text-amber-900' : tagType === 'popular' ? 'bg-purple-300 text-purple-900' : 'bg-green-300 text-green-900'}`}>{tag}</small>
