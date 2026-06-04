@@ -32,7 +32,7 @@ export const ToolsSection = (props) => {
 
       {isActiveProducts && <div className="max-w-300 mx-auto grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8 pt-10">{productsEl}</div>}
 
-      {isActiveCart && <CartSection productsData={productsData} clickedProduct={clickedProduct} cartProduct={cartProduct} handleRemoveProduct={handleRemoveProduct} />}
+      {isActiveCart && <CartSection productsData={productsData} clickedProduct={clickedProduct} setClickedProduct={setClickedProduct} cartProduct={cartProduct} handleRemoveProduct={handleRemoveProduct} />}
 
     </div>
   )

@@ -18,6 +18,8 @@ export const RootLayout = () => {
   const [clickedProduct, setClickedProduct] = useState([])
 
   const cartProduct = productsData.filter(product => clickedProduct.includes(product.id))
+
+
   const handleRemoveProduct = (id) => {
     setClickedProduct(prevIds => prevIds.filter(itemId => itemId !== id))
   }
