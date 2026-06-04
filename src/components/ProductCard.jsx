@@ -1,9 +1,15 @@
 
+import { useState } from "react";
 import { FaPencilRuler } from "react-icons/fa";
 import { TiTick } from "react-icons/ti";
+import { toast } from "react-toastify";
 
 export const ProductCard = ({ product, productClick }) => {
   const { id, name, description, price, period, tag, tagType, features, icon } = product
+
+  const [isBuyBtnClicked, setIsBuyBtnClicked] = useState(false)
+
+  const notify = (isActive) => toast.success(`${name} added to cart.`);
 
   return (
     <div className="flex flex-col gap-4 text-start p-6 border border-gray-200 bg-gray-100 rounded-xl ">
@@ -17,7 +23,7 @@ export const ProductCard = ({ product, productClick }) => {
       <ul>
         {features.map((item, index) => <li key={index} className="flex items-center gap-1"><TiTick className="text-green-600" />{item}</li>)}
       </ul>
-      <a onClick={() => productClick(id)} className="mt-auto btn bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300  hover:scale-105 shadow-md ">Get Started</a>
+      <a onClick={() => { productClick(id); setIsBuyBtnClicked(true); notify(); }} className={`mt-auto btn text-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300  hover:scale-105 shadow-md capitalize active:scale-100 ${isBuyBtnClicked ? 'bg-green-700' : 'bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500'}`}>{isBuyBtnClicked ? 'added to cart' : 'but now'}</a>
     </div>
   )
 }

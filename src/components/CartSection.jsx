@@ -1,8 +1,22 @@
 import { useState } from "react"
+import { toast } from "react-toastify";
 
 export const CartSection = (props) => {
 
   const { productsData, clickedProduct, cartProduct, handleRemoveProduct } = props
+
+  const notify = (name) => toast.error(`${name} remove.`, {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    // transition: Bounce,
+  });
+  const checkoutNotify = () => toast.info('Proceed to checkout page...')
 
   const totalPrice = () => {
     let price = 0
@@ -21,7 +35,7 @@ export const CartSection = (props) => {
           <h4 className="font-semibold text-xl">{item.name}</h4>
           <p>${item.price}</p>
         </div>
-        <button onClick={() => handleRemoveProduct(item.id)} className="btn btn-ghost text-red-800">Remove</button>
+        <button onClick={() => { handleRemoveProduct(item.id); notify(item.name) }} className="btn btn-ghost text-red-800">Remove</button>
       </div>
     </div>)
 
@@ -34,7 +48,7 @@ export const CartSection = (props) => {
         <p>Total</p>
         <p className="text-2xl font-bold">${totalPrice()}</p>
       </div>
-      <a className="btn bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300  active:scale-99 hover:scale-101 capitalize shadow-md w-full">Proceed To Checkout</a>
+      <a onClick={checkoutNotify} className="btn bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300  active:scale-99 hover:scale-101 capitalize shadow-md w-full">Proceed To Checkout</a>
     </div>
   )
 }

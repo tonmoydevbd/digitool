@@ -8,6 +8,7 @@ import { GetStarted } from "./GetStarted"
 import { Pricing } from "./Pricing"
 import { CallToAction } from "./CallToAction"
 import { Footer } from "./Footer"
+import { ToastContainer } from "react-toastify"
 
 const productsPromise = fetch('./products.json').then(res => res.json())
 
@@ -38,6 +39,7 @@ export const RootLayout = () => {
       <Pricing />
       <CallToAction />
       <Footer />
+      <ToastContainer />
     </>
   )
 }

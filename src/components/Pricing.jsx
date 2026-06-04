@@ -15,7 +15,7 @@ export const Pricing = () => {
     <ul className="mb-4">
       {data.features.map((item, index) => <li key={index} className="flex items-center gap-2"><TiTick className="text-green-600" />{item}</li>)}
     </ul>
-    <a className={`mt-auto btn font-semibold py-2.5 px-6 rounded-full transition-all duration-300  hover:scale-105 shadow-md ${data.tagType === 'most popular' ? 'bg-white  text-purple-900' : 'bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white'}`}>{data.button}</a>
+    <a className={`mt-auto btn font-semibold py-2.5 px-6 rounded-full transition-all duration-300  hover:scale-105 active:scale-100 shadow-md ${data.tagType === 'most popular' ? 'bg-white  text-purple-900' : 'bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white'}`}>{data.button}</a>
   </div>)
 
   return (

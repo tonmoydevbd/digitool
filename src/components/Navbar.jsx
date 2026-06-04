@@ -19,7 +19,7 @@ export const Navbar = ({ cartProduct }) => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
               {navLinkElements}
               <a className="btn rounded-full hover:bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 hover:text-white sm:hidden">Login</a>
-              <a className="btn bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300  hover:scale-105 shadow-md">Get Started</a>
+              <a className="btn bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 text-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300  hover:scale-105 active:scale-100 shadow-md">Get Started</a>
             </ul>
           </div>
           <a className="bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent font-bold text-2xl btn btn-ghost">DigiTools</a>
