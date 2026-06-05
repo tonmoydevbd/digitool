@@ -6,8 +6,8 @@ export const CartSection = (props) => {
   const { productsData, clickedProduct, setClickedProduct, cartProduct, handleRemoveProduct } = props
 
 
-  const notify = (name) => toast.error(`${name} remove.`);
-  const checkoutNotify = () => toast.info('Proceed to checkout page...')
+  const notify = (name) => toast.error(`${name} removed.`);
+  const checkoutNotify = () => toast.info('Proceed to checkout page.')
 
   const totalPrice = () => {
     let price = 0
