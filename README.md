@@ -1,16 +1,20 @@
-# React + Vite
+# DigiTools
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive hub designed to supercharge your digital workflow by providing instant access to premium AI tools, design assets, templates, and productivity software.
 
-Currently, two official plugins are available:
+## 🚀 About the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+DigiTools is a modern web application built to help professionals, creators, and developers work smarter. It brings together a curated collection of premium digital products designed to boost productivity and creativity. With simple, transparent pricing and a frictionless 3-step onboarding process, users can transform their workflow and start creating faster in just minutes.
 
-## React Compiler
+## 🛠️ Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend Core:** React.js
+- **Styling & UI Components:** TailwindCSS & daisyUI
+- **Icons:** react-icons
+- **Notifications:** React-Toastify
 
-## Expanding the ESLint configuration
+## ✨ Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Curated Premium Marketplace:** Access a centralized hub of high-quality AI tools, design assets, and productivity templates tailored to modern digital workflows.
+- **Frictionless Onboarding:** A streamlined, 3-step getting-started process that allows users to access and deploy premium tools in minutes instead of hours.
+- **Flexible Subscription Plans:** Simple, transparent pricing options that fit various user needs, featuring the ability to upgrade or downgrade at any time.
